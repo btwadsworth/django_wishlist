@@ -22,6 +22,7 @@ class TitleTest(LiveServerTestCase):
         cls.selenium.quit()
         super().tearDownClass()
     
+    # Test that the title is correct
     def test_title_shown_on_home_page(self):
         self.selenium.get(self.live_server_url)
         assert 'Travel Wishlist' in self.selenium.title
